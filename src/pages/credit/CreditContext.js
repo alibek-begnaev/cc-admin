@@ -1,8 +1,10 @@
 import React, { useState, createContext } from 'react'
 import { Outlet } from 'react-router-dom'
 import { userData } from '../pre-built/user-manage/UserData'
-
+import {test_user} from './test'
 export const CreditContext = createContext()
+
+console.log(test_user)
 const testData = [
   {
     client_id: '4652049',
@@ -131,7 +133,7 @@ const testData = [
 ]
 export const Loader = createContext()
 export const CreditContextProvider = (props) => {
-  const [data, setData] = useState()
+  const [data, setData] = useState(testData)
   const value = React.useMemo(() => [data, setData], [data])
   const [loader, setLoader] = useState(false)
 

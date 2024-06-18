@@ -144,6 +144,7 @@ import LendoSkoringApplication2 from '../pages/lendo/skoring-application/Skoring
 import ApplicationDetails from '../pages/lendo/skoring-application/details/ApplicationDetails'
 import { CreditContextProvider } from '../pages/credit/CreditContext'
 import CreditScoringApplivstions from '../pages/credit/skoring-application/Scoring-applications'
+import ScoringForm from '../pages/credit/scoring/Scoring'
 
 // const Blank = lazy(() => import('../pages/others/Blank'))
 // const Faq = lazy(() => import('../pages/others/Faq'))
@@ -358,7 +359,7 @@ const Router = () => {
             path="/credit/application/:pinfl?"
             element={<LendoLoanApplicationList />}
           ></Route>
-          <Route path="lendo/loans" element={<LendoLoansList />}></Route>
+          <Route path="credit/scoring" element={<ScoringForm />}></Route>
           <Route
             path="credit/skoring-application/"
             element={<CreditScoringApplivstions />}

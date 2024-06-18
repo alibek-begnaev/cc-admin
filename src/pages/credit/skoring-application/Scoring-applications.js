@@ -48,6 +48,7 @@ import { CreditContext, Loader } from '../CreditContext'
 const CreditScoringApplivstions = () => {
   const { contextData } = useContext(CreditContext)
   const [data, setData] = contextData
+  console.log(data)
   const [cookie, setCookie, removeCookie] = useCookies()
   const [loader, setLoader] = useContext(Loader)
   const navigate = useNavigate()
@@ -120,7 +121,7 @@ const CreditScoringApplivstions = () => {
 
   const fetchData = () => {
     setLoader(true)
-    setData([])
+    // setData([])
     dataInstance2
       .post(`/applications`, {
         pageNumber: currentPage - 1,
@@ -172,7 +173,7 @@ const CreditScoringApplivstions = () => {
         (item) => sorts[sorts.findIndex((e) => e.className === item)].order
       )
       console.log(sortKeys, sortValues)
-      setData([])
+      // setData([])
       setLoader(true)
       dataInstance2
         .post(`/applications`, {
