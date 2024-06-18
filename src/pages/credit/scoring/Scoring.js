@@ -456,6 +456,7 @@ const ScoringForm = () => {
             </BlockHeadContent>
           </BlockHead>
           <PreviewCard>
+            
             <div className="nk-wizard nk-wizard-simple is-alter wizard clearfix">
               <Steps config={config}>
                 <Step component={PersonalForm} />
