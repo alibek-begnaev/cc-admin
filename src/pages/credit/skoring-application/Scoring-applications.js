@@ -119,6 +119,8 @@ const CreditScoringApplivstions = () => {
     ]
   )
 
+
+  
   const fetchData = () => {
     setLoader(true)
     // setData([])
